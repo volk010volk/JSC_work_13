@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Задача 1.
+        // class tiles{
+        //     width;
+        //     height;
+        //     distance;
+        //     price;
+        //     square(columns, rows){
+        //         let squareTiles = (this.width * columns + this.distance * (columns - 1)) * 
+        //                             (this.height * rows + this.distance * (rows - 1));
+        //         let fullPrice = columns * rows * this.price;
+        //         alert ("Площадь кафеля " + squareTiles + "\nИтоговая стоимость кафеля = " + fullPrice);
+        //     }
+
+        //     constructor(givenW, givenH, givenD, givenP){
+        //         this.width = givenW;
+        //         this.height = givenH;
+        //         this.distance = givenD;
+        //         this.price = givenP;
+        //     }
+        // }
+        // var tile1 = new tiles (13, 17, 0.5, 75);
+        // tile1.square(3, 3);
+        // var tile2 = new tiles (10, 20, 1, 250);
+        // tile2.square (+prompt("Введите количество столбцов кафеля:"), +prompt("Введите количесвто рядов кафеля:"));
+
+        // Задача 2.
+        class printMachine{
+            size;
+            color;
+            family;
+            print(givenStr){
+                let str = "<p style=\"font-size: " + this.size + "pt; color: "
+                 + this.color + "; font-family: " + this.family + ";\">" + 
+                 givenStr + "</p>\n";
+                 document.write(str);
+            }
+
+            constructor (givenS, givenC, givenF){
+                this.size = givenS;
+                this.color = givenC;
+                this.family = givenF;
+            }
+        }
+
+        var Text1 = new printMachine (22, "#006600", "cursive");
+        Text1.print(prompt("Введите текст для первого абзаца:"));
+        var Text2 = new printMachine (70, "#DD10DD", "serif");
+        Text2.print(prompt("Введите текст для второго абзаца:"));
+
+    </script>
+</body>
+</html>
